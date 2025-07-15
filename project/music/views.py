@@ -48,7 +48,8 @@ def singer_detail_update_delete(request,singer_id):
                     tag = get_object_or_404(Tag, name = t)
                 except:
                     tag = Tag(name=t)
-                    singer.tags.add(tag)
+                    tag.save()
+                singer.tags.add(tag)
             singer.save()
         return Response(data=SingerSerializer(singer).data)
     elif request.method == 'DELETE':
