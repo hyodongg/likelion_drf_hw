@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 URL configuration for project project.
 
@@ -22,12 +21,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('music.urls')),
 ]
-=======
-from django.contrib import admin
-from django.urls import path,include
-
-urlpatterns = [
-    path('admin/',admin.site.urls),
-    path('',include('music.urls')),
-]
->>>>>>> 01824d0ab874f2e7f169f595bcd75e3f2b6ebb73
